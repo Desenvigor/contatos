@@ -1,2 +1,6 @@
-<app-menu></app-menu>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&amp;display=swap" rel="stylesheet">
+<app-menu (emissor)='funcao()'></app-menu>
 <app-lista-de-contatos></app-lista-de-contatos>
+<app-create-contato *ngIf='mostrandoModal'></app-create-contato>

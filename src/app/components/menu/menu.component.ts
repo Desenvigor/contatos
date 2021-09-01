@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-menu',
@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
+  @Output() emissor:EventEmitter<null> = new EventEmitter();
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  mostrarModalClick(): void {
+    console.log('Clicou add contato')
+    this.emissor.emit();
+  }
 }
